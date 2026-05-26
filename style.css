@@ -1,0 +1,89 @@
+:root {
+
+    /* ---------- DEFAULTS ---------- */
+
+     /* --- FONTS -- */
+    --default-font-price:2rem;
+    --dafault-font-family: font-family: "Karla", sans-serif;
+
+    /* --- DIMENTIONS -- */
+    --default-main-width:   40rem;
+    --default-main-height:  35rem;
+
+
+
+
+    /* ----------- COLORS ----------- */
+
+    /* --- SECTION COLOR -- */
+    --section-color-backgroud:hsl(204, 43%, 93%);
+    --section-color-main: white;
+    --section-color-left:hsl(179, 62%, 43%);
+    --section-color-right:hsl(218, 22%, 67%);
+
+    /* --- OTHER COLORS -- */
+
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: var(--section-color-backgroud);
+    font-family: var(--dafault-font-family);
+}
+
+.content-container {
+
+    display: grid;
+    place-items: center;
+    min-height: 95vh;
+}
+
+main {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "main-top main-top" 
+        "main-left main-right";
+    width: var(--default-main-width);
+    height: var(--default-main-height);
+}
+
+.section-main {
+
+    grid-area: main-top;
+    background-color: white;
+    padding: 1rem;
+}
+
+.section-left {
+
+    grid-area: main-left;
+    background-color: var(--section-color-left);
+}
+
+.seciton-right {
+
+    grid-area: main-right;
+    background-color: var();
+}
+
+footer {
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    min-height: 5vh;
+}
+
+
+
