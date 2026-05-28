@@ -9,6 +9,7 @@
     /* --- DIMENTIONS -- */
     --default-main-width:   40rem;
     --default-main-height:  35rem;
+    --default-section-padding: 2rem;
 
 
 
@@ -16,13 +17,14 @@
     /* ----------- COLORS ----------- */
 
     /* --- SECTION COLOR -- */
-    --section-color-backgroud:hsl(204, 43%, 93%);
-    --section-color-main: white;
-    --section-color-left:hsl(179, 62%, 43%);
-    --section-color-right:hsl(218, 22%, 67%);
+    --section-color-neutral:hsl(204, 43%, 93%);
+    --section-color-primary:hsl(179, 62%, 43%);
+    --section-color-top:white;
+    --section-color-blend: white;
 
     /* --- OTHER COLORS -- */
-
+    --color-background:hsl(204, 43%, 93%);
+    --color-text: white;
 }
 
 * {
@@ -30,11 +32,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 body {
 
-    background-color: var(--section-color-backgroud);
+    background-color: var(--color-background);
     font-family: var(--dafault-font-family);
 }
 
@@ -60,20 +63,28 @@ main {
 .section-main {
 
     grid-area: main-top;
-    background-color: white;
-    padding: 1rem;
+    padding: var(--default-section-padding);
+    background-color: var(--section-color-top);
 }
 
 .section-left {
 
     grid-area: main-left;
-    background-color: var(--section-color-left);
+    padding: var(--default-section-padding);
+    background-color: var(--section-color-primary);
 }
 
-.seciton-right {
+
+.sub-heading {
+
+    color: var(--color-text);
+}
+
+.section-right {
 
     grid-area: main-right;
-    background-color: var();
+    padding: var(--default-section-padding);
+    background-color: color-mix(in hsl, var(--section-color-primary), var(--section-color-blend) 30%);
 }
 
 footer {
