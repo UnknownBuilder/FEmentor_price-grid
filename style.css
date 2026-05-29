@@ -1,34 +1,29 @@
 :root {
-
     /* ---------- DEFAULTS ---------- */
 
-     /* --- FONTS -- */
-    --default-font-price:2rem;
-    --dafault-font-family: font-family: "Karla", sans-serif;
+    /* --- FONTS -- */
+    --default-font-price: 2rem;
+    --default-font-family: "Karla", sans-serif;
 
     /* --- DIMENTIONS -- */
-    --default-main-width:   40rem;
-    --default-main-height:  35rem;
+    --default-main-width: 40rem;
+    --default-main-height: 35rem;
     --default-section-padding: 2rem;
-
-
-
 
     /* ----------- COLORS ----------- */
 
     /* --- SECTION COLOR -- */
-    --section-color-neutral:hsl(204, 43%, 93%);
-    --section-color-primary:hsl(179, 62%, 43%);
-    --section-color-top:white;
+    --section-color-neutral: hsl(204, 43%, 93%);
+    --section-color-primary: hsl(179, 62%, 43%);
+    --section-color-top: white;
     --section-color-blend: white;
 
     /* --- OTHER COLORS -- */
-    --color-background:hsl(204, 43%, 93%);
+    --color-background: hsl(204, 43%, 93%);
     --color-text: white;
 }
 
 * {
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -36,65 +31,59 @@
 }
 
 body {
-
     background-color: var(--color-background);
-    font-family: var(--dafault-font-family);
+    font-family: var(--default-font-family);
 }
 
 .content-container {
-
     display: grid;
     place-items: center;
     min-height: 95vh;
 }
 
 main {
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "main-top main-top" 
+    grid-template-areas:
+        "main-top main-top"
         "main-left main-right";
     width: var(--default-main-width);
     height: var(--default-main-height);
+    border-radius: 1.5rem;
+    overflow: hidden;
 }
 
 .section-main {
-
     grid-area: main-top;
     padding: var(--default-section-padding);
     background-color: var(--section-color-top);
 }
 
 .section-left {
-
     grid-area: main-left;
     padding: var(--default-section-padding);
     background-color: var(--section-color-primary);
 }
 
-
 .sub-heading {
-
     color: var(--color-text);
 }
 
 .section-right {
-
     grid-area: main-right;
     padding: var(--default-section-padding);
-    background-color: color-mix(in hsl, var(--section-color-primary), var(--section-color-blend) 30%);
+    background-color: color-mix(
+        in hsl,
+        var(--section-color-primary),
+        var(--section-color-blend) 30%
+    );
 }
 
 footer {
-
     display: flex;
     align-items: center;
     justify-content: end;
     flex-direction: column;
     min-height: 5vh;
 }
-
-
-
