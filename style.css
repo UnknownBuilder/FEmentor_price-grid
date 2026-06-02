@@ -10,7 +10,6 @@
 
     /* --- MAIN SECTION --- */
     --default-main-width: 40rem;
-    --default-main-height: 30rem;
     --default-section-padding: 2rem;
 
     /* ----------- COLORS ----------- */
@@ -56,14 +55,18 @@ main {
     grid-template-areas:
         "main-top main-top"
         "main-left main-right";
-    width: var(--default-main-width);
-    height: var(--default-main-height);
+    max-width: var(--default-main-width);
     border-radius: 0.5rem;
     overflow: hidden;
     margin: 1rem;
 }
 
 p {
+    line-height: 1.5rem;
+}
+
+ul {
+    list-style: none;
     line-height: 1.5rem;
 }
 
@@ -109,7 +112,6 @@ p {
 .section-left {
     grid-area: main-left;
     display: grid;
-    flex-direction: column;
     padding: var(--default-section-padding);
     background-color: var(--section-color-primary);
 }
@@ -118,7 +120,6 @@ p {
     color: var(--color-text-secondary);
     font-size: calc(var(--default-font-size-paragraphs) + 0.25rem);
     font-weight: 700;
-    padding-bottom: var(--default-font-padding);
 }
 
 .section-right {
@@ -137,6 +138,7 @@ p {
 
 .subtext {
     color: var(--color-text-secondary);
+    padding-top: var(--default-font-padding);
 }
 
 .price-heading {
