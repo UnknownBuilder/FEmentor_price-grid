@@ -61,6 +61,20 @@ main {
     margin: 1rem;
 }
 
+h1 {
+    color: var(--section-color-primary);
+    font-weight: 700;
+    font-size: var(--default-font-size-heading);
+    padding-bottom: calc(var(--default-font-padding) * 1.5);
+}
+
+h2 {
+    color: var(--color-secondary);
+    font-size: calc(var(--default-font-size-paragraphs) + 0.25rem);
+    font-weight: 500;
+    padding-bottom: var(--default-font-padding);
+}
+
 p {
     line-height: 1.5rem;
 }
@@ -88,19 +102,6 @@ ul {
 
 .btn-sign-up:active {
     background-color: color-mix(in hsl, var(--color-secondary), black 15%);
-}
-.main-heading-1 {
-    color: var(--section-color-primary);
-    font-weight: 700;
-    font-size: var(--default-font-size-heading);
-    padding-bottom: calc(var(--default-font-padding) * 1.5);
-}
-
-.main-heading-2 {
-    color: var(--color-secondary);
-    font-size: calc(var(--default-font-size-paragraphs) + 0.25rem);
-    font-weight: 500;
-    padding-bottom: var(--default-font-padding);
 }
 
 .section-main {
